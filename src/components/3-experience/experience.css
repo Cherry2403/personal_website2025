@@ -1,0 +1,5 @@
+.experience {
+    position: relative;
+    z-index: 1; /* Lower than the dish */
+  }
+  
