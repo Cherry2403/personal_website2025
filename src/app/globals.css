@@ -1,9 +1,9 @@
-@import "tailwindcss";
 @import '@fontsource/jost/100.css';  /* Thin */
 @import '@fontsource/jost/300.css';  /* Light */
 @import '@fontsource/jost/400.css';  /* Regular */
 @import '@fontsource/jost/600.css';  /* Semi-bold */
 @import '@fontsource/jost/800.css';  /* Extra-bold */
+@import "tailwindcss";
 
 html {
   font-family: 'Jost', sans-serif;

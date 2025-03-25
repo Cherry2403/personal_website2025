@@ -56,12 +56,12 @@ const ISParent = () => {
       >
         <img src="/dish.png" alt="Dish" />
         {showContent && (
-          <div className="text-[10px] dish-content absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 text-center">
-            <p className="font-light"> <span className="text-[#4A3103]">Backend development:</span> <br/> NestJS (NodeJS, TypeScript) | RESTful APIs </p>
-            <p className="font-light"> <span className="text-[#4A3103]">Frontend development:</span> <br/> Dart | JavaScript | HTML | CSS | NextJS (React, TypeScript) </p>
-            <p className="font-light"> <span className="text-[#4A3103]">Database:</span> <br/> MongoDB | MySQL | SQLite </p>
-            <p className="font-light"> <span className="text-[#4A3103]">Others:</span> <br/> C | C++ | Python | UI/UX | C# | Scala | Java </p>
-            <p className="font-light"> <span className="text-[#4A3103]">Soft skills:</span> <br/> Project management | Communication | Adaptability | Open-minded </p>
+          <div className="text-[9px] dish-content absolute top-1/3 w-3/5 left-1/2 transform -translate-x-1/2 -translate-y-1/6 text-center text-[#A14400] flex flex-col h-full gap-[calc(100%/40)]">
+            <p className="font-medium"> <span className="text-[#4A3103] font-bold text-[12px]">Backend development:</span> <br/> NestJS (NodeJS, TypeScript) | Software Architecture(UML) | RESTful APIs </p>
+            <p className="font-medium"> <span className="text-[#4A3103] font-bold text-[12px]">Frontend development:</span> <br/> Dart | JavaScript | HTML | CSS | NextJS (React, TypeScript) </p>
+            <p className="font-medium"> <span className="text-[#4A3103] font-bold text-[12px]">Database:</span> <br/> MongoDB | MySQL | SQLite </p>
+            <p className="font-medium"> <span className="text-[#4A3103] font-bold text-[12px]">Others:</span> <br/> C | C++ | Python | UI/UX design | C# | Scala | Java | Git</p>
+            <p className="font-medium"> <span className="text-[#4A3103] font-bold text-[12px]">Soft skills:</span> <br/> Project management(Agile) | Communication | Adaptability | Open-minded </p>
           </div>
         )}
 

@@ -1,5 +1,48 @@
-.experience {
-    position: relative;
-    z-index: 1; /* Lower than the dish */
-  }
-  
+@import "tailwindcss";
+
+
+/* Background gradient & container */
+.experience-container {
+  @apply relative z-[1] min-h-screen bg-gradient-to-b from-[#7E4116] to-[#592E0F] 
+         flex justify-center items-center p-8;
+}
+
+/* Grid layout */
+.experience-grid {
+  @apply w-full max-w-6xl grid md:grid-cols-2 gap-8;
+}
+
+/* Section styling */
+.experience-section {
+  @apply flex flex-col gap-6;
+}
+
+/* Section title */
+.section-title {
+  @apply text-center text-2xl text-white font-bold;
+}
+
+/* Experience card */
+.experience-card {
+  @apply bg-white/30 p-6 rounded-lg shadow-lg text-white border border-[#A36A3D] backdrop-blur-md;
+}
+
+/* Experience title */
+.experience-title {
+  @apply font-bold text-lg text-black;
+}
+
+/* Experience date */
+.experience-date {
+  @apply text-sm text-black opacity-80;
+}
+
+/* Tech stack and skills section */
+.tech-stack, .personal-skills {
+  @apply font-bold text-black;
+}
+
+/* The actual text inside tech stack and personal skills */
+.tech-stack span, .personal-skills span {
+  @apply font-medium text-black;
+}
