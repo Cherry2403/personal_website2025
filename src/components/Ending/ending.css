@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.ending_container {
+    @apply w-full pt-30;
+}

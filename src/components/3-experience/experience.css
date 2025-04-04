@@ -4,45 +4,45 @@
 /* Background gradient & container */
 .experience-container {
   @apply relative z-[1] min-h-screen bg-gradient-to-b from-[#7E4116] to-[#592E0F] 
-         flex justify-center items-center p-8;
+         flex justify-center items-center pb-20;
 }
 
 /* Grid layout */
 .experience-grid {
-  @apply w-full max-w-6xl grid md:grid-cols-2 gap-8;
+  @apply w-full grid md:grid-cols-2 gap-10 px-8 pt-40;
 }
 
 /* Section styling */
 .experience-section {
-  @apply flex flex-col gap-6;
+  @apply flex flex-col gap-10 px-10 items-center;
 }
 
 /* Section title */
 .section-title {
-  @apply text-center text-2xl text-white font-bold;
+  @apply text-center text-[55px] text-[#FFEBCC] font-light;
 }
 
 /* Experience card */
 .experience-card {
-  @apply bg-white/30 p-6 rounded-lg shadow-lg text-white border border-[#A36A3D] backdrop-blur-md;
+  @apply bg-[#FDFFF5]/58 p-6 rounded-lg shadow-lg text-[#381D09] text-[18px] border border-[#A36A3D] font-light backdrop-blur-md;
 }
 
 /* Experience title */
 .experience-title {
-  @apply font-bold text-lg text-black;
+  @apply font-bold text-lg;
 }
 
 /* Experience date */
 .experience-date {
-  @apply text-sm text-black opacity-80;
+  @apply opacity-80;
 }
 
 /* Tech stack and skills section */
 .tech-stack, .personal-skills {
-  @apply font-bold text-black;
+  @apply mt-2 font-bold text-[#994A11];
 }
 
 /* The actual text inside tech stack and personal skills */
 .tech-stack span, .personal-skills span {
-  @apply font-medium text-black;
+  @apply font-medium text-[#381D09];
 }

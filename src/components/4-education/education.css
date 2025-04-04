@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+.education_grid {
+    @apply w-full min-h-screen grid md:grid-cols-2 ;
+}
+
+
+.edu_section {
+    @apply flex flex-col ;
+}
+
+
+.edu_title {
+    @apply text-[48px] font-light uppercase self-start mb-13 pt-30 px-5 text-[#FFEBCC];
+}
+
+
+.education_gif {
+    @apply w-full h-auto object-cover object-center -mt-7 border border-indigo-600 ;
+}
+
+
+.courses_section {
+    @apply flex flex-col text-right;
+}
+
+
+.course_title {
+    @apply text-[48px] font-light pt-30 mb-13 px-10 text-[#FFEBCC];
+}
+
+.courses_list {
+    @apply font-light mt-15 text-[24px] px-10 mb-16 text-[#EFDFCC];
+}
+
+.dark_bg {
+    @apply top-0 left-0 w-full h-auto bg-[#592E0F] z-[-1] ;
+}
+
+.light_bg {
+    @apply top-0 left-0 w-full h-auto bg-[#BF621E] z-[-1] ;
+}
+
+
+@media (max-width: 768px) {
+    .education_grid {
+        @apply w-full grid-cols-1 text-center; 
+    }
+
+    .edu_section {
+        @apply col-span-1 flex items-center justify-center text-center;
+    }
+
+    .education_gif {
+        @apply w-full h-auto mt-0; 
+    }
+
+    .edu_title {
+        @apply text-center self-center mb-10;
+    }
+
+    .courses_section {
+        @apply col-span-1 flex items-center justify-center text-center;
+    }
+
+    .course_title {
+        @apply mb-10;
+    }
+    .courses_list {
+        @apply font-light mt-5 text-[24px];
+    }
+
+}

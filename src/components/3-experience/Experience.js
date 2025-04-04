@@ -36,9 +36,9 @@ function Experience() {
             <p3 className = "experience-date">09/2024 - Recent</p3>
 
             <p>HUST MAP is a campus navigation app for a university with around 40 buildings, designed to provide a platform that previously didn’t exist for students.
-              <br /><br />Key Features:
             </p>
-            <ul className="list-disc list-inside">
+            <p className = "mt-3">Key Features:</p>
+            <ul className="list-[circle] pl-5 list-inside">
               <li>Rooms, Buildings search tool</li>
               <li>2D interactive map</li>
               <li>Rooms Find, Discover</li>
@@ -53,9 +53,9 @@ function Experience() {
             <p3 className = "experience-date">08/2021 - 12/2021</p3>
 
             <p>Plepleple is the first video game I created independently using Unity after learn game coding from YouTube videos. Plepleple’s inspiration came from simple, successful games like Flappy Bird and Mario.
-              <br /><br />Key Features:
             </p>
-            <ul className="list-disc list-inside">
+            <p className = "mt-3">Key Features:</p>
+            <ul className="list-[circle] pl-5 list-inside">
               <li>Jump | Shooting</li>
               <li>Different levels and theme</li>
             </ul>
