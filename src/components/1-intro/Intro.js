@@ -46,7 +46,7 @@ const Intro = () => {
     <div 
       id = "intro"className = "h-screen flex flex-col items-center text-white relative">
       <img
-        src="/introdraftpic.jpg"
+        src="/intro/15.JPG"
         alt="Background"
         className="bg-cover absolute w-full h-full object-cover"
       />
@@ -63,9 +63,9 @@ const Intro = () => {
       )}
 
       <h2 
-        className="absolute right-25 top-[45%] text-6xl max-w-[700px] 
+        className="absolute right-25 top-[45%] text-[45px] max-w-[600px] 
                   rotate-[-3.7deg] text-right break-words 
-                  font-light text-white opacity-85 z-[999]"
+                  font-bold text-white opacity-85 z-[999] mt-20"
       >
         {thirdText}
       </h2>
