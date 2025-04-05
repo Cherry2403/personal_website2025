@@ -1,7 +1,12 @@
 @import "tailwindcss";
 
+.education_container {
+    @apply relative z-[1] min-h-screen bg-[#BF621E];
+}
+
+
 .education_grid {
-    @apply w-full min-h-screen grid md:grid-cols-2 ;
+    @apply w-full min-h-screen grid md:grid-cols-2;
 }
 
 
@@ -16,7 +21,7 @@
 
 
 .education_gif {
-    @apply w-full h-auto object-cover object-center -mt-7 border border-indigo-600 ;
+    @apply w-full h-auto object-cover object-center -mt-7;
 }
 
 

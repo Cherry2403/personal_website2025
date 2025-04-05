@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.dish_content_container {
+    @apply font-medium text-[5px] sm:text-[8px] md:text-[9px] absolute inset-0 flex flex-col items-center justify-center text-center text-[#A14400] px-[20%] gap-[2%];
+}
+
+.experience_title {
+    @apply text-[#4A3103] font-bold text-[6px] sm:text-[8px] md:text-[12px];
+}
+
+

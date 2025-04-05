@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
 .ending_container {
-    @apply w-full pt-30;
+    @apply relative w-full p-6 pt-70 flex flex-col;
 }
+
+.quote_container {
+    @apply font-light text-[48px] text-center text-black mb-30;
+}
+
+.quote1_2 {
+    @apply font-bold;
+}
+
+
+.contact_container {
+    @apply grid max-w-[600px] sm:grid-cols-2 mx-10 mt-30 font-light text-[23px] text-black gap-x-30;
+}
+
+.contact_col2 {
+    @apply text-right self-end;
+}
+
+
+

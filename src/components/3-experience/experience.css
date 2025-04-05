@@ -9,17 +9,17 @@
 
 /* Grid layout */
 .experience-grid {
-  @apply w-full grid md:grid-cols-2 gap-10 px-8 pt-40;
+  @apply w-full grid md:grid-cols-2 gap-10 px-8 pt-40 mt-17;
 }
 
 /* Section styling */
 .experience-section {
-  @apply flex flex-col gap-10 px-10 items-center;
+  @apply flex flex-col gap-18 px-10 items-center;
 }
 
 /* Section title */
 .section-title {
-  @apply text-center text-[55px] text-[#FFEBCC] font-light;
+  @apply text-center text-[55px] text-[#FFEBCC] font-light mb-10;
 }
 
 /* Experience card */
