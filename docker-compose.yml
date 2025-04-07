@@ -40,4 +40,4 @@ services:
 
 networks:
   web_network:
-    driver: overlay
+    driver: bridge  
