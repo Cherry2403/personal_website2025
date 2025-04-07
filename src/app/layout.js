@@ -15,7 +15,16 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Diep's personal website",
   description: "This is Diep's amazing info site",
-  image: "public/skills/4.jpeg",
+  openGraph: {
+    images: [
+      {
+        url: '/skills/4.jpeg', 
+        width: 1200,  
+        height: 630,
+        alt: 'Description of the image',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
