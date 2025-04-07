@@ -3,10 +3,12 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files
-COPY package.json package-lock.json ./
+# Copy package.json only (no package-lock.json reference)
+COPY package.json ./
+
 # Install dependencies
-RUN npm ci
+# Use npm install instead of npm ci since we don't have a package-lock.json
+RUN npm install
 
 # Copy the rest of the application
 COPY . .
@@ -32,13 +34,6 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 CMD wget -
 
 # Expose the port the app runs on
 EXPOSE 3000
-
-# Set user for better security
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 nextjs && \
-    chown -R nextjs:nodejs /app
-
-USER nextjs
 
 # Start the application
 CMD ["node", "server.js"]
