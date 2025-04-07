@@ -1,3 +1,5 @@
+# Personal Website 2025
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -16,9 +18,55 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Docker Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Local Development with Docker
+
+```bash
+# Build and run the development container
+npm run docker:dev
+```
+
+### Production Deployment
+
+```bash
+# Build and run the production container
+npm run docker:prod
+```
+
+## Portainer Deployment
+
+To deploy this application using Portainer:
+
+1. Access your Portainer dashboard
+2. Go to Stacks > Add Stack
+3. Name your stack (e.g., "personal-website")
+4. Upload or paste the contents of the `docker-compose.yml` file
+5. Configure environment variables if needed:
+   - `IMAGE_NAME`: Name of the Docker image (default: personal-website)
+   - `IMAGE_TAG`: Tag of the Docker image (default: latest)
+   - `PORT`: Port to expose the application (default: 3000)
+   - `REPLICAS`: Number of container replicas (default: 1)
+6. Click "Deploy the stack"
+
+### Docker Swarm Deployment
+
+If you're running a Docker Swarm cluster:
+
+```bash
+# Initialize swarm if not already done
+docker swarm init
+
+# Deploy the stack
+docker stack deploy -c docker-compose.yml personal-website
+```
+
+## Environment Variables
+
+The application can be configured using the following environment variables:
+
+- `NODE_ENV`: Environment mode (development/production)
+- `PORT`: The port on which the application will run (default: 3000)
 
 ## Learn More
 
@@ -26,11 +74,3 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

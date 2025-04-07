@@ -1,0 +1,25 @@
+# Node dependencies
+node_modules
+npm-debug.log
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Documentation files
+*.md
+
+# Lock files (except package.json)
+package-lock.json
+yarn.lock
+
+# Build output
+.next
+out
+
+# User uploads
+public/assets/uploads
+
+# Environment variables
+.env*
+!.env.example

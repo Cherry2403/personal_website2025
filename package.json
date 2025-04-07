@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker:build": "docker build -t personal-website .",
+    "docker:run": "docker run -p 3000:3000 personal-website",
+    "docker:dev": "docker-compose up dev",
+    "docker:prod": "docker-compose up -d app"
   },
   "dependencies": {
     "@fontsource/jost": "^5.2.5",

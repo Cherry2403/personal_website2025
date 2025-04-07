@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  nextapp:
+    image: yourusername/personal-website:${IMAGE_TAG:-latest}
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    deploy:
+      replicas: ${REPLICAS:-1}
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    networks:
+      - web_network
+
+  dev:
+    image: yourusername/personal-website-dev:${IMAGE_TAG:-latest}
+    ports:
+      - "${DEV_PORT:-3000}:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    driver: overlay
