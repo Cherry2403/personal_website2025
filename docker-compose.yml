@@ -2,7 +2,10 @@ version: '3.8'
 
 services:
   nextapp:
-    image: yourusername/personal-website:${IMAGE_TAG:-latest}
+    image: ${IMAGE_NAME:-personal-website}:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "${PORT:-3000}:3000"
     environment:
@@ -19,7 +22,10 @@ services:
       - web_network
 
   dev:
-    image: yourusername/personal-website-dev:${IMAGE_TAG:-latest}
+    image: ${IMAGE_NAME:-personal-website}-dev:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      target: builder
     ports:
       - "${DEV_PORT:-3000}:3000"
     volumes:
