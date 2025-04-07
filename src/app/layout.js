@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Diep's personal website",
   description: "This is Diep's amazing info site",
+  metadataBase: new URL('https://cherry.id.vn'),
   openGraph: {
     images: [
       {
