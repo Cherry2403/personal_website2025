@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     images: [
       {
-        url: 'next.svg', 
+        url: '/next.svg', 
       },
     ],
   },
