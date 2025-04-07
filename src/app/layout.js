@@ -19,10 +19,7 @@ export const metadata = {
   openGraph: {
     images: [
       {
-        url: '/skills/4.jpeg', 
-        width: 1200,  
-        height: 630,
-        alt: 'Description of the image',
+        url: 'next.svg', 
       },
     ],
   },
