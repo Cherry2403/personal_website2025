@@ -17,11 +17,24 @@ export const metadata = {
   description: "This is Diep's amazing info site",
   metadataBase: new URL('https://cherry.id.vn'),
   openGraph: {
+    title: "Diep's Portfolio",
+    description: "Web Developer & Designer Portfolio",
+    type: 'website',
     images: [
       {
-        url: '/next.svg', 
+        url: '/skills/4.jpeg',
+        width: 1200,
+        height: 630,
+        alt: "Diep's Portfolio",
       },
     ],
+    siteName: "Diep's Portfolio",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Diep's Portfolio",
+    description: "Web Developer & Designer Portfolio",
+    images: ['/skills/4.jpeg'],
   },
 };
 
