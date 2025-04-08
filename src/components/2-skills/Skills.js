@@ -22,7 +22,7 @@ const Skills = () => {
 
       <div className='relative w-full h-screen overflow-hidden'>
         <img
-          src="/skills/18.JPG"
+          src="/skills/19.JPG"
           alt="Background"
           className="absolute w-full h-full object-cover"
         />
