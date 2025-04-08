@@ -18,7 +18,7 @@
 }
 
 .contact_col2 {
-    @apply text-right self-end;
+    @apply text-left md:text-right self-end;
 }
 
 

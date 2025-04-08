@@ -5,7 +5,6 @@ import Skills from '../2-skills/Skills';
 import './isparent.css';
 
 const ISParent = () => {
-  //const [yOffset, setYOffset] = useState(0);
   const [dishTop, setDishTop] = useState("40%"); // Initial position
   const [dishScale, setDishScale] = useState(0.5); // Initial scale
   const [showContent, setShowContent] = useState(false);
