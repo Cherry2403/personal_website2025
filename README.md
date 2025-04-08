@@ -16,7 +16,7 @@ bun dev
 docker
 docker compose up --build -d
 And when you want to stop it:
-docker compose down
+docker compose stop
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
