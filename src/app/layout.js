@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Cherry's portfolio",
-  description: "meomeomeeomeo chipichapa",
+  title: "Diep's personal website",
+  description: "This is Diep's amazing info site",
   metadataBase: new URL('https://cherry.id.vn'),
   openGraph: {
     title: "Diep's Portfolio",
