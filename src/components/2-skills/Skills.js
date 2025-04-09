@@ -7,16 +7,14 @@ const Skills = () => {
   return (
 
     <div id="skills" className = "relative w-full">
-      {/* Dish in Skills */}
-      
 
       <div className = "w-full bg-[#7E4116] py-13">
-        <div className='drop-shadow-lg flex relative top-15 flex overflow-hidden'>
-          <span className = "text-[96px] font-semibold text-[#C9A163] mr-[57px]">SKILLS</span>
-          <span className = "text-[96px] font-semibold text-[#4A3103] mr-[57px]">SKILLS</span>
-          <span className = "text-[96px] font-semibold text-[#C9A163] mr-[57px]">SKILLS</span>
-          <span className = "text-[96px] font-semibold text-[#4A3103] mr-[57px]">SKILLS</span>
-          <span className = "text-[96px] font-semibold text-[#C9A163] mr-[57px]">SKILLS</span>
+        <div className='drop-shadow-lg flex relative top-15 flex overflow-hidden text-[96px] font-semibold space-x-10'>
+          <span className = "text-[#C9A163]">SKILLS</span>
+          <span className = "text-[#4A3103]">SKILLS</span>
+          <span className = "text-[#C9A163]">SKILLS</span>
+          <span className = "text-[#4A3103]">SKILLS</span>
+          <span className = "text-[#C9A163]">SKILLS</span>
         </div>
       </div>
 

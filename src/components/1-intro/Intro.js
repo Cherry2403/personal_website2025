@@ -2,11 +2,7 @@
 import React, { useEffect, useState } from 'react'
 
 const Intro = () => {
-  //firstText show normally
-  // second pop out after a few sec
-  // third one by one using useState
-  
-  // state used
+
   const [showSecondText, setSecondText] = useState(false);
   const [thirdText, setThirdText] = useState(""); // Fix the typo!
   const fullText = " What do I bring to the table today";
@@ -63,7 +59,7 @@ const Intro = () => {
       )}
 
       <h2 
-        className="absolute right-25 top-[45%] text-[45px] max-w-[600px] 
+        className="absolute right-25 top-[45%] text-[30px] sm:text-[37px] md:text-[45px] max-w-[600px] 
                   rotate-[-3.7deg] text-right break-words 
                   font-bold text-white opacity-85 z-[999] mt-20"
       >

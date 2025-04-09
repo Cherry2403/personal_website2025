@@ -5,28 +5,32 @@ import Skills from '../2-skills/Skills';
 import './isparent.css';
 
 const ISParent = () => {
-  const [dishTop, setDishTop] = useState("40%"); // Initial position
+
+  const [baseDishTop, setBaseDishTop] = useState(55);
+  const [dishTop, setDishTop] = useState("48%"); // Initial position
   const [dishScale, setDishScale] = useState(0.5); // Initial scale
   const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const width = window.innerWidth;
+    const initialTop = width < 768 ? 65 : 47;
+    setBaseDishTop(initialTop);
+    setDishTop(`${initialTop}%`);
+  }, []);
   
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      //setYOffset(scrollY);
 
       const introTop = document.getElementById("intro").offsetTop;
       const skillsElement = document.getElementById("skills");
       const skillsTop = skillsElement.offsetTop;
-      const skillsHeight = skillsElement.offsetHeight;
-      //const skillsCenter = skillsTop + (skillsHeight);
       
 
-      const totalTravel = skillsTop - introTop; // Distance to travel
-
-      // Normalize scroll to 0 → 1 range
+      const totalTravel = skillsTop - introTop;
       const progress = Math.min(1, scrollY / totalTravel);
   
-      setDishTop(`${40 + progress * 145}%`); // Moves from 40% to 70%
+      setDishTop(`${baseDishTop + progress * 137}%`); // Moves from 40% to 70%
       setDishScale(0.5 + progress * 1.75); // Grows from 0.5x to 2x
 
       if (progress === 1) {
@@ -57,7 +61,6 @@ const ISParent = () => {
         <img src="/dish.png" alt="Dish" />
         {showContent && (
           <div className="dish_content_container">
-
             <p> <span className="experience_title">Backend development:</span> <br/> NestJS (NodeJS, TypeScript) | Software Architecture(UML) | RESTful APIs </p>
             <p> <span className="experience_title">Frontend development:</span> <br/> Dart | JavaScript | HTML | CSS | NextJS (React, TypeScript) </p>
             <p> <span className="experience_title">Database:</span> <br/> MongoDB | MySQL | SQLite </p>
