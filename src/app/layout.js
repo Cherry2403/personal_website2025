@@ -13,28 +13,62 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Diep's personal website",
-  description: "This is Diep's amazing info site",
+  // Basic metadata
+  title: "Diep's Portfolio | Web Developer & Designer",
+  description: "Professional portfolio showcasing web development and design projects by Diep (Cherry)",
   metadataBase: new URL('https://cherry.id.vn'),
+  
+  // OpenGraph metadata (for Facebook, LinkedIn, etc.)
   openGraph: {
-    title: "Diep's Portfolio",
-    description: "Web Developer & Designer Portfolio",
+    title: "Diep's Portfolio | Web Developer & Designer",
+    description: "Web development and design portfolio showcasing projects and skills",
+    url: 'https://cherry.id.vn',
     type: 'website',
     images: [
       {
-        url: '/skills/4.jpeg',
+        url: '/skills/4.webp',
         width: 1200,
         height: 630,
-        alt: "Diep's Portfolio",
+        alt: "Diep's Portfolio - Web Developer & Designer",
+        type: 'image/webp',
       },
     ],
     siteName: "Diep's Portfolio",
+    locale: 'en_US',
   },
+  
+  // Twitter Card metadata
   twitter: {
     card: 'summary_large_image',
     title: "Diep's Portfolio",
     description: "Web Developer & Designer Portfolio",
-    images: ['/skills/4.jpeg'],
+    images: [
+      {
+        url: '/skills/4.webp',
+        width: 1200,
+        height: 630,
+        alt: "Diep's Portfolio",
+      }
+    ],
+    creator: '@YourTwitterHandle', // Add your handle if applicable
+  },
+  
+  // Favicon and icons
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  
+  // Additional SEO tags
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+  },
+  
+  // Canonical URL
+  alternates: {
+    canonical: 'https://cherry.id.vn',
   },
 };
 
