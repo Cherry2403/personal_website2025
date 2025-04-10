@@ -1,48 +1,40 @@
 @import "tailwindcss";
 
 
-/* Background gradient & container */
 .experience-container {
   @apply relative z-[1] min-h-screen bg-gradient-to-b from-[#7E4116] to-[#592E0F] 
          flex justify-center items-center pb-20;
 }
 
-/* Grid layout */
 .experience-grid {
   @apply w-full grid md:grid-cols-2 gap-10 px-8 pt-40 mt-17;
 }
 
-/* Section styling */
 .experience-section {
   @apply flex flex-col gap-18 px-10 items-center;
 }
 
-/* Section title */
+
 .section-title {
   @apply text-center text-[55px] text-[#FFEBCC] font-light mb-10;
 }
 
-/* Experience card */
 .experience-card {
   @apply bg-[#FDFFF5]/58 p-6 rounded-lg shadow-lg text-[#381D09] text-[18px] border border-[#A36A3D] font-light backdrop-blur-md;
 }
 
-/* Experience title */
 .experience-title {
   @apply font-bold text-lg;
 }
 
-/* Experience date */
 .experience-date {
   @apply opacity-80;
 }
 
-/* Tech stack and skills section */
 .tech-stack, .personal-skills {
   @apply mt-2 font-bold text-[#994A11];
 }
 
-/* The actual text inside tech stack and personal skills */
 .tech-stack span, .personal-skills span {
   @apply font-medium text-[#381D09];
 }
