@@ -11,7 +11,8 @@ function Experience() {
           <h2 className = "section-title">Work Experience</h2>
 
           <div className = "experience-card">
-            <h3 className = "experience-title">BACK-END DEVELOPER, TECH MANAGER || Ella</h3>
+            <h3 className = "experience-title">BACK-END DEVELOPER, TECH MANAGER ||<a href="https://www.linkedin.com/company/ellaeverydayandluxury/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="hover:underline"> Ella</a>
+            </h3>
             <p3 className = "experience-date">02/2024 - 08/2024</p3>
             <p>Ella is a startup building a high-fashion rental platform. Throughout its journey, I was there until the end, giving my best and gaining the most. I successfully developed the e-commerce website from scratch.</p>
             <p className = "tech-stack">Tech stack: <span>NestJS | MongoDB | Next.js</span></p>
@@ -19,7 +20,7 @@ function Experience() {
           </div>
 
           <div className = "experience-card">
-            <h3 className = "experience-title">GAME DEVELOPER INTERN || GTV Vietnam Technology Joint Stock Company</h3>
+            <h3 className = "experience-title">GAME DEVELOPER INTERN ||<a href="https://gtv.com.vn/" target="_blank" rel="noopener noreferrer" className="hover:underline"> GTV Vietnam Technology Joint Stock Company</a></h3>
             <p3 className = "experience-date">05/2022 - 12/2022</p3>
             <p>GTV is an online game production company. I got my first chance to have my hand on small projects of a company</p>
             <p className="personal-skills">Personal advanced skills: <span>Unity | C# | UI/UX design | Teamwork</span></p>
@@ -32,7 +33,9 @@ function Experience() {
           <h2 className = "section-title">Project Experience</h2>
 
           <div className = "experience-card">
-            <h3 className = "experience-title">FOUNDER | INDIVIDUAL DESIGNER  & DEVELOPER || HUST MAP</h3>
+            <h3 className = "experience-title">FOUNDER | INDIVIDUAL DESIGNER  & DEVELOPER ||
+              <a href="https://drive.google.com/file/d/1SeBJOIknOGyjkEUxVa2d3op9ZcAj_IPP/view" target="_blank" rel="noopener noreferrer" className="hover:underline"> HUST MAP</a>
+            </h3>
             <p3 className = "experience-date">09/2024 - Recent</p3>
 
             <p>HUST MAP is a campus navigation app for a university with around 40 buildings, designed to provide a platform that previously didn’t exist for students.
@@ -49,7 +52,7 @@ function Experience() {
           </div>
 
           <div className = "experience-card">
-            <h3 className = "experience-title">FOUNDER | INDIVIDUAL DESIGNER  & DEVELOPER ||Plepleple</h3>
+            <h3 className = "experience-title">FOUNDER | INDIVIDUAL DESIGNER  & DEVELOPER ||<a href="https://simmer.io/@DiepPeez/plepleple" target="_blank" rel="noopener noreferrer" className="hover:underline"> Plepleple</a></h3>
             <p3 className = "experience-date">08/2021 - 12/2021</p3>
 
             <p>Plepleple is the first video game I created independently using Unity after learn game coding from YouTube videos. Plepleple’s inspiration came from simple, successful games like Flappy Bird and Mario.
