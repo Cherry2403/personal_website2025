@@ -49,11 +49,11 @@ const Intro = () => {
 
       
       <div className="absolute top-[10%] text-center text-white">
-        <h1 className="text-5xl font-bold">Hi, I am Diep</h1>
-        <p className="text-2xl text-white font-light">you can call me <span className="font-bold text-5xl">Cherry</span></p>
-        {showSecondText && (
+        <h1 className="text-5xl font-bold">Hi, my name Diep</h1>
+        <p className="text-2xl text-white font-light">you can call me <span className="font-bold text-4xl">Cherry</span></p>
+         {/*{showSecondText && (
         <p className = "mt-5 top-[25%] text-center text-2xl font-light text-white">a software engineer</p>
-      )}
+      )}*/}
       </div>
 
       <h2 className="absolute right-25 top-[45%] text-[30px] sm:text-[37px] md:text-[45px] max-w-[600px] 

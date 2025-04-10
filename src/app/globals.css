@@ -3,7 +3,6 @@
 @import '@fontsource/jost/400.css';  /* Regular */
 @import '@fontsource/jost/600.css';  /* Semi-bold */
 @import '@fontsource/jost/800.css';  /* Extra-bold */
-@import "tailwindcss";
 
 html {
   font-family: 'Jost', sans-serif;
@@ -20,7 +19,6 @@ body {
   color: var(--foreground);
   font-family: 'Jost', sans-serif;
 }
-
 
 
 
