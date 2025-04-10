@@ -6,14 +6,17 @@ import './isparent.css';
 
 const ISParent = () => {
 
-  const [baseDishTop, setBaseDishTop] = useState(55);
+  const [dishFinal, setDishFinal] = useState(145);
+  const [baseDishTop, setBaseDishTop] = useState(47);
   const [dishTop, setDishTop] = useState("48%"); // Initial position
   const [dishScale, setDishScale] = useState(0.5); // Initial scale
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     const width = window.innerWidth;
-    const initialTop = width < 768 ? 65 : 47;
+    const initialTop = width < 768 ? 50 : 43;
+    const dishFinalSize = width < 768 ? 100 : 145;
+    setDishFinal(dishFinalSize);
     setBaseDishTop(initialTop);
     setDishTop(`${initialTop}%`);
   }, []);
@@ -30,7 +33,7 @@ const ISParent = () => {
       const totalTravel = skillsTop - introTop;
       const progress = Math.min(1, scrollY / totalTravel);
   
-      setDishTop(`${baseDishTop + progress * 137}%`); // Moves from 40% to 70%
+      setDishTop(`${baseDishTop + progress * dishFinal}%`); // Moves from 40% to 70%
       setDishScale(0.5 + progress * 1.75); // Grows from 0.5x to 2x
 
       if (progress === 1) {
