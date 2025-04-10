@@ -12,7 +12,6 @@
     @apply font-bold;
 }
 
-
 .contact_container {
     @apply grid max-w-[600px] sm:grid-cols-2 mx-10 mt-30 font-light text-[23px] text-black gap-x-30;
 }

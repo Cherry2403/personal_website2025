@@ -44,8 +44,8 @@ const ISParent = () => {
 
   return (
     <div>
-      <Intro />
-      <Skills />
+      <Intro/>
+      <Skills/>
       <div 
         className="dish relative" 
         style={{

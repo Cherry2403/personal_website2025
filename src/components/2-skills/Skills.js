@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 
 const Skills = () => {
  
@@ -20,12 +20,11 @@ const Skills = () => {
 
       <div className='relative w-full h-screen overflow-hidden'>
         <img
-          src="/skills/19.JPG"
+          src="/skills/18.1.JPG"
           alt="Background"
           className="absolute w-full h-full object-cover"
         />
       </div>
-      
     </div>
 
     

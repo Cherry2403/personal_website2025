@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const Intro = () => {
 
   const [showSecondText, setSecondText] = useState(false);
-  const [thirdText, setThirdText] = useState(""); // Fix the typo!
+  const [thirdText, setThirdText] = useState("");
   const fullText = " What do I bring to the table today";
 
 

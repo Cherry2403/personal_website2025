@@ -44,7 +44,7 @@ function Experience() {
               <li>Rooms Find, Discover</li>
             </ul>
 
-            <p className = "tech-stack">Tech stack: <span>NestJS | MySQL, SQLite | Flutter (Dart) | Figma | QGIS</span></p>
+            <p className = "tech-stack">Tech stack: <span>NestJS | MySQL, SQLite | NextJS | Figma | QGIS</span></p>
             <p className="personal-skills">Personal advanced skills: <span>Full-stack development | Database management | System Architecture | Geospatial mapping | UI/UX design</span></p>
           </div>
 
