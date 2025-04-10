@@ -14,7 +14,7 @@ function Experience() {
             <h3 className = "experience-title">BACK-END DEVELOPER, TECH MANAGER || Ella</h3>
             <p3 className = "experience-date">02/2024 - 08/2024</p3>
             <p>Ella is a startup building a high-fashion rental platform. Throughout its journey, I was there until the end, giving my best and gaining the most. I successfully developed the e-commerce website from scratch.</p>
-            <p className = "tech-stack">Tech stack: <span>NestJS | MongoDB | NextJS</span></p>
+            <p className = "tech-stack">Tech stack: <span>NestJS | MongoDB | Next.js</span></p>
             <p className="personal-skills">Personal advanced skills: <span>NestJS | MongoDB | RESTful APIs | Software Architecture | Teamwork and Management</span></p>
           </div>
 
@@ -44,7 +44,7 @@ function Experience() {
               <li>Rooms Find, Discover</li>
             </ul>
 
-            <p className = "tech-stack">Tech stack: <span>NestJS | MySQL, SQLite | NextJS | Figma | QGIS</span></p>
+            <p className = "tech-stack">Tech stack: <span>NestJS | MySQL, SQLite | Next.js | Figma | QGIS</span></p>
             <p className="personal-skills">Personal advanced skills: <span>Full-stack development | Database management | System Architecture | Geospatial mapping | UI/UX design</span></p>
           </div>
 
