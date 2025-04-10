@@ -56,16 +56,11 @@ const Intro = () => {
       )}
       </div>
 
-      <h2 
-        className="absolute right-25 top-[45%] text-[30px] sm:text-[37px] md:text-[45px] max-w-[600px] 
-                  rotate-[-3.7deg] text-right break-words 
-                  font-bold text-white opacity-85 z-[99] mt-20"
-      >
-        {thirdText}
+      <h2 className="absolute right-25 top-[45%] text-[30px] sm:text-[37px] md:text-[45px] max-w-[600px] 
+        rotate-[-3.7deg] text-right break-words font-bold text-white opacity-85 z-[99] mt-20">{thirdText}
       </h2>
 
       <div className = "techstack_container absolute opacity-85 left-[20px] bottom-[20px] text-left md:text-[18px] text-[15px] text-white font-medium z-[100]">
-
         <div className = "title font-bold">Tech stack</div>
         <p>Framework: Next.js</p>
         <p>Language: JavaScript</p>
