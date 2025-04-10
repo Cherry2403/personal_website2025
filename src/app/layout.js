@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Intro from "@/components/1-intro/Intro";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +12,6 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  // Basic metadata
   title: "Diep's Portfolio | Web Developer & Designer",
   description: "Professional portfolio showcasing web development and design projects by Diep (Cherry)",
   metadataBase: new URL('https://cherry.id.vn'),
@@ -26,7 +24,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/skills/4.webp',
+        url: '/skills/4.1.webp',
         width: 1200,
         height: 630,
         alt: "Diep's Portfolio - Web Developer & Designer",
@@ -37,14 +35,13 @@ export const metadata = {
     locale: 'en_US',
   },
   
-  // Twitter Card metadata
   twitter: {
     card: 'summary_large_image',
     title: "Diep's Portfolio",
     description: "Web Developer & Designer Portfolio",
     images: [
       {
-        url: '/skills/4.webp',
+        url: '/skills/4.1.webp',
         width: 1200,
         height: 630,
         alt: "Diep's Portfolio",
