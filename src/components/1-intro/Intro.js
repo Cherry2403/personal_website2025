@@ -69,7 +69,7 @@ const Intro = () => {
         <div className = "title font-bold">Tech stack</div>
         <p>Framework: Next.js</p>
         <p>Language: JavaScript</p>
-        <p>Hosting: Cloudflare | nginx | Proxmox | Docker</p>
+        <p>Hosting: Cloudflare | Nginx Proxy Manager | Proxmox | Docker</p>
       </div>
 
     </div>
