@@ -1,16 +1,27 @@
 "use client"
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 
 const Intro = () => {
 
   const [showSecondText, setSecondText] = useState(false);
   const [thirdText, setThirdText] = useState("");
-  const fullText = " What do I bring to the table today";
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const fullText = "  What do I bring to the table today";
 
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.style.overflow = "hidden"; 
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
+  useEffect(() => {
+    if(!imageLoaded) return;
     const secondTextTimeout = setTimeout(() => setSecondText(true), 1000);
-    document.body.style.overflow = "hidden";
   
     const thirdTextTimeout = setTimeout(() => {
       let index = 0;
@@ -27,7 +38,7 @@ const Intro = () => {
           clearInterval(interval);
         }
       }, 60);
-    }, 2000);
+    }, 1000);
 
   
   
@@ -36,38 +47,53 @@ const Intro = () => {
       clearTimeout(thirdTextTimeout);
       document.body.style.overflow = "auto";
     };
-  }, []);
+  }, [imageLoaded]);
 
   return (
-    <div 
-      id = "intro"className = "h-screen flex flex-col items-center text-white relative">
-      <img
-        src="/intro/15.JPG"
-        alt="Background"
-        className="bg-cover absolute w-full h-full object-cover"
-      />
+    <>
+      {!imageLoaded && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black z-[9999]">
+          <span className="text-white text-3xl font-bold animate-pulse">Loading...</span>
+        </div>
+      )}
+      <div 
+        id = "intro"className = "h-screen flex flex-col items-center text-white relative">
+        <Image
+          src="/intro/15.JPG"
+          alt="Background"
+          width={1920}
+          height={1080}
+          className="bg-cover absolute w-full h-full object-cover"
+          onLoad={() => {
+            console.log("Image loaded!");
+            setImageLoaded(true);
+          }}
+          priority
+        />
 
-      
-      <div className="absolute top-[10%] text-center text-white">
-        <h1 className="text-5xl font-bold">Hi, my name Diep</h1>
-        <p className="text-2xl text-white font-light">you can call me <span className="font-bold text-4xl">Cherry</span></p>
-         {/*{showSecondText && (
-        <p className = "mt-5 top-[25%] text-center text-2xl font-light text-white">a software engineer</p>
-      )}*/}
+        
+        <div className="absolute top-[10%] text-center text-white">
+          <h1 className="text-5xl font-bold text-outline">Hi, my name Diep</h1>
+          <p className="text-2xl text-white font-light">you can call me <span className="font-bold text-4xl text-outline">Cherry</span></p>
+          {/*{showSecondText && (
+          <p className = "mt-5 top-[25%] text-center text-2xl font-light text-white">a software engineer</p>
+        )}*/}
+        </div>
+
+        <h2 className="absolute right-[5vw] top-[70vh] sm:right-[10vw] sm:top-[50vh] text-stroke-black text-stroke-2 text-[30px] sm:text-[37px] md:text-[45px] max-w-[600px] 
+          rotate-[-3.7deg] text-outline text-right break-words font-bold text-white opacity-85 z-[99]">{thirdText}
+        </h2>
+
+        <div className = "techstack_container absolute opacity-85 text-outline left-[20px] bottom-[20px] text-left md:text-[18px] text-[15px] text-white font-medium z-[100]">
+          <div className = "title font-bold">Tech stack</div>
+          <p>Framework: Next.js</p>
+          <p>Language: JavaScript</p>
+          <p>Hosting: Cloudflare | Nginx Proxy Manager | Proxmox | Docker</p>
+        </div>
+
       </div>
-
-      <h2 className="absolute right-25 top-[45%] text-[30px] sm:text-[37px] md:text-[45px] max-w-[600px] 
-        rotate-[-3.7deg] text-right break-words font-bold text-white opacity-85 z-[99] mt-20">{thirdText}
-      </h2>
-
-      <div className = "techstack_container absolute opacity-85 left-[20px] bottom-[20px] text-left md:text-[18px] text-[15px] text-white font-medium z-[100]">
-        <div className = "title font-bold">Tech stack</div>
-        <p>Framework: Next.js</p>
-        <p>Language: JavaScript</p>
-        <p>Hosting: Cloudflare | Nginx Proxy Manager | Proxmox | Docker</p>
-      </div>
-
-    </div>
+    </>
+    
   );
 };
 
