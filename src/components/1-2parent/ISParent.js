@@ -8,7 +8,7 @@ const ISParent = () => {
 
   const [dishFinal, setDishFinal] = useState(145);
   const [baseDishTop, setBaseDishTop] = useState(47);
-  const [dishTop, setDishTop] = useState("48%"); // Initial position
+  const [dishTop, setDishTop] = useState("43vh%"); // Initial position
   const [dishScale, setDishScale] = useState(0.5); // Initial scale
   const [showContent, setShowContent] = useState(false);
 
@@ -18,7 +18,7 @@ const ISParent = () => {
     const dishFinalSize = width < 768 ? 100 : 145;
     setDishFinal(dishFinalSize);
     setBaseDishTop(initialTop);
-    setDishTop(`${initialTop}%`);
+    setDishTop(`${initialTop}vh`);
   }, []);
   
   useEffect(() => {
@@ -32,10 +32,14 @@ const ISParent = () => {
 
       const totalTravel = skillsTop - introTop;
       const progress = Math.min(1, scrollY / totalTravel);
-  
-      setDishTop(`${baseDishTop + progress * dishFinal}%`); // Moves from 40% to 70%
-      setDishScale(0.5 + progress * 1.75); // Grows from 0.5x to 2x
+      
+      const initialTop = window.innerWidth < 768 ? 50 : 43;
+      const finalTop = 190;
+      const currentTop = initialTop + (finalTop - initialTop) * progress;
 
+      setDishTop(`${currentTop}vh`);
+      setDishScale(0.5 + progress * 1.75);
+      
       if (progress === 1) {
         setShowContent(true);
       }
@@ -46,15 +50,16 @@ const ISParent = () => {
   }, []);
 
   return (
-    <div>
+    <div className=" bg-[#7E4116] relative overflow-x-hidden sm:overflow-visible">
       <Intro/>
       <Skills/>
       <div 
-        className="dish relative" 
+        className="dish relative z-103" 
         style={{
           position: "absolute",
           top: dishTop,
           left: "50%",
+          maxWidth: "100vw",
           transform: `translate(-50%, 0%) scale(${dishScale})`,
           transition: "top 0.1s linear",
           zIndex: 97,

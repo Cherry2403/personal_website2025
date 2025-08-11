@@ -2,7 +2,7 @@
 
 
 .experience-container {
-  @apply relative z-[1] min-h-screen bg-gradient-to-b from-[#7E4116] to-[#592E0F] 
+  @apply relative z-[1] min-h-screen bg-gradient-to-b from-[#7E4116] to-[#592E0F]
          flex justify-center items-center pb-20;
 }
 
