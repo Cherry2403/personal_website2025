@@ -8,8 +8,7 @@ function Experience() {
   const [uniqueVisitors, setUniqueVisitors] = useState(0);
 
   useEffect(() => {
-    const zoneId = "3e85d6ba870fd2433262137e86e1d9a7"
-    const apiToken = "SnvzXJi3zv2tsDfQPrdrY2iGkFOyEPOPjz3nkbyT"
+    
   },[]
 
   );
