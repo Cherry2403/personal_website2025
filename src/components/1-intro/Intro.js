@@ -52,8 +52,8 @@ const Intro = () => {
   return (
     <>
       {!imageLoaded && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black z-[9999]">
-          <span className="text-white text-3xl font-bold animate-pulse">Loading...</span>
+        <div className="fixed inset-0 flex items-center justify-center bg-[#C16226] z-[9999]">
+          <span className="text-white text-[30px] sm:text-[50px] font-bold animate-pulse">Hi, nice to meet you</span>
         </div>
       )}
       <div 

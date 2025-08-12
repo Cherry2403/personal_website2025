@@ -7,11 +7,11 @@
 }
 
 .experience-grid {
-  @apply w-full grid md:grid-cols-2 gap-10 px-8 pt-40 mt-17;
+  @apply w-full grid md:grid-cols-2 gap-10 px-8 pt-20 sm:pt-40 mt-17;
 }
 
 .experience-section {
-  @apply flex flex-col gap-18 px-10 items-center;
+  @apply flex flex-col gap-18 sm:px-10 items-center;
 }
 
 
@@ -20,11 +20,11 @@
 }
 
 .experience-card {
-  @apply bg-[#FDFFF5]/58 p-6 rounded-lg shadow-lg text-[#381D09] text-[18px] border border-[#A36A3D] font-light backdrop-blur-md;
+  @apply bg-[#FDFFF5]/58 p-6 rounded-lg shadow-lg text-black text-[18px] border border-[#A36A3D] font-light backdrop-blur-md;
 }
 
 .experience-title {
-  @apply font-bold text-lg;
+  @apply font-bold text-[18px] sm:text-[23px];
 }
 
 .experience-date {
@@ -32,9 +32,10 @@
 }
 
 .tech-stack, .personal-skills {
-  @apply mt-2 font-bold text-[#994A11];
+  @apply mt-2 font-semibold text-black;
 }
 
 .tech-stack span, .personal-skills span {
   @apply font-medium text-[#381D09];
 }
+ /* text-[#994A11] */
