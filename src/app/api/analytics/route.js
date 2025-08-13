@@ -1,13 +1,13 @@
+
 export async function GET() {
-  const zoneId = "3e85d6ba870fd2433262137e86e1d9a7"; // Replace with your Zone ID
-  const apiToken = "SnvzXJi3zv2tsDfQPrdrY2iGkFOyEPOPjz3nkbyT"; // Replace with your API Token
+  const zoneId = process.env.CLOUDFLARE_ZONE_ID;
+  const apiToken = process.env.CLOUDFLARE_TOKEN;
 
   // Define date range (Past 24 hours)
   const now = new Date();
   const startDate = new Date(now.getTime() - 24 * 60 * 60 * 1000); // 24 hours ago
   const startDateStr = startDate.toISOString();
   const endDateStr = now.toISOString();
-  console.log("HERE");
 
   // GraphQL query
   const query = `
@@ -35,7 +35,6 @@ export async function GET() {
   };
 
   try {
-    // Make API request
     const response = await fetch("https://api.cloudflare.com/client/v4/graphql", {
       method: "POST",
       headers: {

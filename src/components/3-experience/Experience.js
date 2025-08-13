@@ -9,15 +9,12 @@ function Experience() {
 
   useEffect(() => {
     const fetchAnalyticsData = async () => {
-      const zoneId = "3e85d6ba870fd2433262137e86e1d9a7"; 
-      const apiToken = "SnvzXJi3zv2tsDfQPrdrY2iGkFOyEPOPjz3nkbyT";
-
       try {
-        const response = await fetch("/api/analytics"); // Call your server-side API route
+        const response = await fetch("/api/analytics");
         if (response.ok) {
           const data = await response.json();
           console.log("API response data:", data);
-          setUniqueVisitors(data.uniqueVisitors); // Update state with unique visitors
+          setUniqueVisitors(data.uniqueVisitors); 
           console.log("Unique Visitors (Last 24 Hours):", uniqueVisitors);
         } else {
           console.error("Failed to fetch analytics data:", response.statusText);
