@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './experience.css';
 
 
@@ -8,7 +8,26 @@ function Experience() {
   const [uniqueVisitors, setUniqueVisitors] = useState(0);
 
   useEffect(() => {
-    
+    const fetchAnalyticsData = async () => {
+      const zoneId = "3e85d6ba870fd2433262137e86e1d9a7"; 
+      const apiToken = "SnvzXJi3zv2tsDfQPrdrY2iGkFOyEPOPjz3nkbyT";
+
+      try {
+        const response = await fetch("/api/analytics"); // Call your server-side API route
+        if (response.ok) {
+          const data = await response.json();
+          console.log("API response data:", data);
+          setUniqueVisitors(data.uniqueVisitors); // Update state with unique visitors
+          console.log("Unique Visitors (Last 24 Hours):", uniqueVisitors);
+        } else {
+          console.error("Failed to fetch analytics data:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error fetching analytics data:", error);
+      }
+    };
+
+    fetchAnalyticsData();
   },[]
 
   );
@@ -36,19 +55,26 @@ function Experience() {
           </div>
 
         </div>
-
-        {/* Project Experience */}
         
         <div className = "experience-section">
           <h2 className = "section-title">Project Experience</h2>
 
           <div>
-            <button 
-              onClick={() => window.open("https://hustmap.com/", "_blank")}
-              className = "view-web-button bg-white rounded-tl-[10px] rounded-tr-[60px] p-[10px] px-[25px] pr-[30px] hover:bg-[#f0f0f0] transition-all duration-300 transform hover:scale-105 shadow-lg">
-              View website
-            </button>
-            <div className = "experience-card ">
+            <div className="flex flex-row text-[12px] md:text-[15px] ">
+
+              <button
+                onClick={() => window.open("https://hustmap.com/", "_blank")}
+                className="font-bold z-4 view-web-button bg-white rounded-tl-[10px] rounded-tr-[60px] pl-[5px] pr-[15px] md:py-[5px] md:pl-[10px] md:pr-[30px] hover:bg-[#f0f0f0] transition-all duration-300 transform hover:scale-102 shadow-lg"
+              >
+                View website
+              </button>
+
+              <div className="bg-yellow-400 z-3 ml-[-20px] text-black font-bold rounded-tl-[10px] rounded-tr-[60px]  flex items-center justify-center pl-[20px] pr-[20px] sm:pl-[30px] md:pr-[30px] shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                {uniqueVisitors} Visitors (last 24 hours)*
+              </div>
+            </div>
+            
+            <div className = "experience-card-custom bg-[#FDFFF5]/58 p-6 rounded-b-lg rounded-tr-lg shadow-lg text-black text-[18px] border border-[#A36A3D] font-light backdrop-blur-md">
               <h3 className = "experience-title">FOUNDER & DESIGNER & DEVELOPER ||
                 <a href="https://hustmap.com/" target="_blank" rel="noopener noreferrer" className="hover:underline"> HUSTMAP.com</a>
               </h3>
@@ -64,6 +90,7 @@ function Experience() {
 
               <p className = "tech-stack">Tech stack: <span>NestJS | MySQL | Next.js | Figma | QGIS | Google Analytics | Cloudflare</span></p>
               <p className="personal-skills">Personal advanced skills: <span>Full-stack development | Database & cache management | System Architecture | Geospatial mapping | UI/UX design</span></p>
+              <div className='text-[13px] sm:text-[15px] mt-[20px] font-medium'>* LIVE TRACK BY Cloudflare</div> 
             </div>
           </div>
           
