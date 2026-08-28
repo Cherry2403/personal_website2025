@@ -1,27 +1,31 @@
 {
-  "name": "personal-website2",
+  "name": "personal-website2025",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
   },
   "dependencies": {
     "@fontsource/jost": "^5.2.5",
     "@fontsource/lato": "^5.2.5",
-    "next": "15.2.1",
+    "next": "15.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@opennextjs/cloudflare": "^1.20.4",
     "@tailwindcss/postcss": "^4.0.15",
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
-    "eslint-config-next": "15.2.1",
+    "eslint-config-next": "15.5",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.15"
+    "tailwindcss": "^4.0.15",
+    "wrangler": "^4.127.1"
   }
 }
