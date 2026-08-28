@@ -36,6 +36,19 @@ function Experience() {
           <h2 className = "section-title">Work Experience</h2>
 
           <div className = "experience-card">
+            <h3 className = "experience-title">SOFTWARE ENGINEER INTERN ||<a href="https://www.vanlanschotkempen.com/en-nl" target="_blank" rel="noopener noreferrer" className="hover:underline"> Van Lanschot Kempen</a>
+            </h3>
+            <div className = "experience-date">02/2026 - 07/2026</div>
+            <p>Van Lanschot Kempen is the <span className='underline'>oldest independent financial institution in the Netherlands</span>, operating as a specialized wealth manager since 1737. I worked as a full-stack developer in the Digital Innovation & Analytics (DIA) department.</p>
+            <ul className="list-[circle] pl-5 list-inside mt-3">
+              <li><span className="font-semibold">Horizon team</span>: built features on an internal application bankers use to work with clients, alongside senior developers. Handled a data migration and extended an already-scaled system, back-end and front-end.</li>
+              <li className="mt-2"><span className="font-semibold">Copilot Usage Web</span>: an internal AI-cost analytics dashboard used across 9 departments by about 150 tech employees daily. I built the cost analytics side of the application, and designed and built its deployment infrastructure from scratch: CI/CD pipelines for frontend and backend, container security scanning, and a fully network-isolated Azure deployment.</li>
+            </ul>
+            <p className = "tech-stack">Tech stack: <span>Angular 20 | .NET 9 | C# | SQL Server | Azure DevOps | Azure Container Apps | Bicep | Docker</span></p>
+            <p className="personal-skills">Personal advanced skills: <span>Full-stack development | CI/CD & DevSecOps | Azure cloud infrastructure | Data modeling & migration | Scalable system design | Teamwork</span></p>
+          </div>
+
+          <div className = "experience-card">
             <h3 className = "experience-title">BACK-END DEVELOPER & TECH MANAGER ||<a href="https://www.linkedin.com/company/ellaeverydayandluxury/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="hover:underline"> Ella</a>
             </h3>
             <div className = "experience-date">02/2024 - 08/2024</div>
@@ -60,6 +73,42 @@ function Experience() {
             <div className="flex flex-row text-[12px] md:text-[15px] ">
 
               <button
+                onClick={() => window.open("https://hackstreetgirl-hack4her2026.vercel.app/", "_blank")}
+                className="font-bold z-4 view-web-button bg-white rounded-tl-[10px] rounded-tr-[60px] pl-[5px] pr-[15px] md:py-[5px] md:pl-[10px] md:pr-[30px] hover:bg-[#f0f0f0] transition-all duration-300 transform hover:scale-102 shadow-lg"
+              >
+                View website
+              </button>
+
+              <div className="bg-yellow-400 z-3 ml-[-20px] text-black font-bold rounded-tl-[10px] rounded-tr-[60px] flex items-center justify-center pl-[20px] pr-[20px] sm:pl-[30px] md:pr-[30px] shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                1st Place
+              </div>
+            </div>
+
+            <div className = "experience-card-custom bg-[#FDFFF5]/58 p-6 rounded-b-lg rounded-tr-lg shadow-lg text-black text-[18px] border border-[#A36A3D] font-light backdrop-blur-md">
+              <h3 className = "experience-title">WINNER, bol.com CHALLENGE ||
+                <a href="https://hack4her.org/" target="_blank" rel="noopener noreferrer" className="hover:underline"> Hack4Her 2026</a>
+              </h3>
+              <div className = "experience-date">07/2026</div>
+
+              <p>A 2-day hackathon build with a team of 4 developers. The bol challenge: put the environmental cost next to the price tag, so shoppers see the full picture in one glance.</p>
+
+              <p className = "mt-3">Key Features:</p>
+              <ul className="list-[circle] pl-5 list-inside">
+                <li>Rebuilt bol.com storefront with sustainability smartly integrated in the shopping flow</li>
+                <li>Sustainability score, CO₂ footprint & repairability per product</li>
+                <li>Side-by-side eco-impact comparison</li>
+                <li>&quot;Future-friendly pick&quot; surfacing + sort by sustainability</li>
+              </ul>
+
+              <p className = "tech-stack">Tech stack: <span>Next.js | Tailwind CSS | Vercel</span></p>
+              <p className="personal-skills">Personal advanced skills: <span>Rapid prototyping | Critical Product Design | Business Analysis </span></p>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex flex-row text-[12px] md:text-[15px] ">
+
+              <button
                 onClick={() => window.open("https://hustmap.com/", "_blank")}
                 className="font-bold z-4 view-web-button bg-white rounded-tl-[10px] rounded-tr-[60px] pl-[5px] pr-[15px] md:py-[5px] md:pl-[10px] md:pr-[30px] hover:bg-[#f0f0f0] transition-all duration-300 transform hover:scale-102 shadow-lg"
               >
@@ -77,7 +126,7 @@ function Experience() {
               </h3>
               <div className = "experience-date">09/2024 - Recent</div>
 
-              <p>HUSTMAP.com attract 700+ user on its first day. It navigate, process 60+ buildings and 1000+ rooms </p>
+              <p>HUSTMAP.com is a map for university students, it attract 500-1500 users on daily basis. It navigate, process 60+ buildings and 1000+ rooms </p>
               <p className = "mt-3">Key Features:</p>
               <ul className="list-[circle] pl-5 list-inside">
                 <li>Rooms, Buildings search</li>

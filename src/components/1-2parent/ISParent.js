@@ -69,8 +69,8 @@ const ISParent = () => {
         <img src="/dish.png" alt="Dish" />
         {showContent && (
           <div className="dish_content_container">
-            <p> <span className="experience_title">Backend development:</span> <br/> NestJS (NodeJS, TypeScript) | Software Architecture(UML) | RESTful APIs </p>
-            <p> <span className="experience_title">Frontend development:</span> <br/> JavaScript | HTML | CSS | Next.js (React, TypeScript) </p>
+            <p> <span className="experience_title">Backend development:</span> <br/> NestJS (NodeJS, TypeScript) | ASP.NET Core (C#) | Software Architecture(UML) | RESTful APIs </p>
+            <p> <span className="experience_title">Frontend development:</span> <br/> JavaScript | HTML | CSS | Next.js (React, TypeScript) | Angular (TypeScript) </p>
             <p> <span className="experience_title">Deployment & Hosting & Optimize:</span> <br/> Docker | Cloudflare | Google Analytics | CI/CD pipelines | Cache management(Redis)</p>
             <p> <span className="experience_title">Others:</span> <br/> C | C++ | Python | UI/UX design | C# | Scala | Java | Git | Project management(Agile)</p>
             <p> <span className="experience_title">Database:</span> <br/> MongoDB | MySQL | SQLite </p>
