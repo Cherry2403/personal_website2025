@@ -90,7 +90,7 @@ function Experience() {
               </h3>
               <div className = "experience-date">07/2026</div>
 
-              <p>A 2-day hackathon build with a team of 4 developers. The bol challenge: put the environmental cost next to the price tag, so shoppers see the full picture in one glance.</p>
+              <p>A 2-day hackathon build with a team of 4 developers, where I was the <span className="font-semibold">main developer and product designer</span>. The bol challenge: put the environmental cost next to the price tag, so shoppers see the full picture in one glance.</p>
 
               <p className = "mt-3">Key Features:</p>
               <ul className="list-[circle] pl-5 list-inside">
