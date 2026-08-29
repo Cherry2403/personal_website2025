@@ -73,7 +73,7 @@ const Intro = () => {
 
         
         <div className="absolute top-[10%] text-center text-white">
-          <h1 className="text-5xl font-bold text-outline">Hi, my name is Stella Pham</h1>
+          <h1 className="text-5xl font-bold text-outline">Hi, my name is Diep (Stella)</h1>
           {/*{showSecondText && (
           <p className = "mt-5 top-[25%] text-center text-2xl font-light text-white">a software engineer</p>
         )}*/}
